@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    # Redirect www to non www
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+    # Redirect http to https
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect 404 so React router can be used on full page refresh.
+    FallbackResource /index.html
+</IfModule>
