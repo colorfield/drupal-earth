@@ -23,6 +23,7 @@ Sorts by download count the aggregation is sorted with the total usage by versio
 - Contributed modules: `python3 get_projects_usage_by_type.py --project_type=module`
 - Contributed themes: `python3 get_projects_usage_by_type.py --project_type=theme`
 - Contributed distributions: `python3 get_projects_usage_by_type.py --project_type=distribution`
+- Get geographic data: `python3 geocode_countries.py`
 
 ## Aggregate
 
