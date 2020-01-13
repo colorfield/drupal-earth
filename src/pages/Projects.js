@@ -59,12 +59,12 @@ const Projects = (props) => {
           <section className="section">
             <div className="container is-fluid has-text-white">
               <h1 className="title has-text-white">Projects</h1>
-              <h2 className="title has-text-white">Drupal core</h2>
-              <h3 className="subtitle has-text-white">Usage by version</h3>
-              <div className="nivo-container">
-                <NivoBar data={coreData} index="year" animate={true} layout="vertical" formatDisabled={true} />
-              </div>
               <div className="is-hidden-mobile">
+                <h2 className="title has-text-white">Drupal core</h2>
+                <h3 className="subtitle has-text-white">Usage by version</h3>
+                <div className="nivo-container">
+                  <NivoBar data={coreData} index="year" animate={true} layout="vertical" formatDisabled={true} />
+                </div>
                 <h2 className="title has-text-white">Contributed projects</h2>
                 <p className="has-text-white">Data based on the most downloaded and used projects by Drupal version.<br/>Results are truncated to 100 modules, 30 themes, 20 distributions.</p>
                 <h3 className="subtitle has-text-white">Modules usage</h3>
@@ -81,7 +81,7 @@ const Projects = (props) => {
                 </div>
               </div>
               <div className="is-hidden-tablet">
-                <p>Contributed data not available on smaller screens.</p>
+                <p>Not available yet on smaller screens.</p>
               </div>
             </div>
           </section>    
