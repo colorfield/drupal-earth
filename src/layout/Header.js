@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import logoBlack from '../logo-black.svg';
 
 const Header = withRouter(props => <Nav {...props}/>);
 
-class Nav extends React.Component {
+class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class Nav extends React.Component {
         }}
       >
         <div className="navbar-brand">
-          <Link className="navbar-item" to="/">
+          <Link className="navbar-item" to="/" onClick={this.toggleNav}>
             <img 
               src={logoBlack} alt=""
             />
@@ -53,19 +53,19 @@ class Nav extends React.Component {
           }
         >
           <div className="navbar-start">
-            <Link className={path === '/' ? "is-active navbar-item" : "navbar-item"} to="/">
+            <Link className={path === '/' ? "is-active navbar-item" : "navbar-item"} to="/" onClick={this.toggleNav}>
               <span className="icon has-text-info" style={{ marginRight: 5 }}>
                 <i className="fa fa-lg fa-map" />
               </span>
               Map
             </Link>
-            <Link className={path.startsWith('/users') ? "is-active navbar-item" : "navbar-item"} to="/users">
+            <Link className={path.startsWith('sers') ? "is-active navbar-item" : "navbar-item"} to="/users" onClick={this.toggleNav}>
               <span className="icon has-text-info" style={{ marginRight: 5 }}>
                 <i className="fa fa-lg fa-user" />
               </span>
               Users
             </Link>
-            <Link className={path === '/projects' ? "is-active navbar-item" : "navbar-item"} to="/projects">
+            <Link className={path === '/projects' ? "is-active navbar-item" : "navbar-item"} to="/projects" onClick={this.toggleNav}>
               <span
                 className="icon has-text-info"
                 style={{ marginRight: 5 }}
@@ -75,12 +75,12 @@ class Nav extends React.Component {
               Projects
             </Link>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link className={path.startsWith('/about') ? "is-active navbar-link" : "navbar-link"} to="/about">About</Link>
+              <Link className={path.startsWith('/about') ? "is-active navbar-link" : "navbar-link"} to="/about" onClick={this.toggleNav}>About</Link>
               <div className="navbar-dropdown">
-                <Link className={path === '/about' ? "is-active navbar-item" : "navbar-item"} to="/about">The Drupal Earth project</Link>
+                <Link className={path === '/about' ? "is-active navbar-item" : "navbar-item"} to="/about" onClick={this.toggleNav}>The Drupal Earth project</Link>
                 <hr className="navbar-divider" />
-                <Link className={path === '/about-sources' ? "is-active navbar-item" : "navbar-item"} to="/about-sources">Sources</Link>
-                <Link className={path === '/about-credits' ? "is-active navbar-item" : "navbar-item"} to="/about-stack">Stack</Link>
+                <Link className={path === '/about-sources' ? "is-active navbar-item" : "navbar-item"} to="/about-sources" onClick={this.toggleNav}>Sources</Link>
+                <Link className={path === '/about-credits' ? "is-active navbar-item" : "navbar-item"} to="/about-stack" onClick={this.toggleNav}>Stack</Link>
               </div>
             </div>
           </div>
