@@ -27,7 +27,7 @@ const About = () => (
 
       <h2 className="subtitle has-text-white">Roadmap</h2>
 
-      <p>This project is still a playground so the roadmap is subject to change but the first things that I'd like to work on are:</p>
+      <p>This is still a playground so the roadmap is subject to change but the first things that I'd like to work on are:</p>
 
       <ul>
         <li>Weekly incremental update and monthly full update</li>

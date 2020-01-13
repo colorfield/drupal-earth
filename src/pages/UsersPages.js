@@ -101,7 +101,7 @@ const Users = (props) => {
               <div className="error">{error.message}</div> :
               <section className="section hero">
                 <div className="is-fluid">
-                  <h1 className="title has-text-white">Drupal contributors</h1>
+                  <h1 className="title has-text-white">Drupal core contributors</h1>
                   <div className="tabs is-toggle is-toggle-rounded is-centered">
                     <ul>
                       <li className={path === '/users' ? "is-active" : ""}><NavLink to="/users" activeClassName="is-active" className="has-text-white">Geography</NavLink></li>
