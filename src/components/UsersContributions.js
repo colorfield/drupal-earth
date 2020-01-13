@@ -1,15 +1,16 @@
 import React from 'react';
 import Table from './Table';
 import NivoPie from '../components/NivoPie';
-import { getSortedArrayByValue } from '../lib/utils';
+import { getSortedArrayByValue, capitalize } from '../lib/utils';
 
 const UsersContributions = (props) => {
     const sortedContributions = getSortedArrayByValue(props.usersData.contributions).reverse();
     const contributions = [];
     sortedContributions.forEach(contribution => {
+        const contributionType = capitalize(contribution[0]);
         contributions.push({
-            id: contribution[0],
-            label: contribution[0],
+            id: contributionType,
+            label: contributionType,
             value: contribution[1],
         });
     });
