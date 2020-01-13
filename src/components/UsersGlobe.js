@@ -13,24 +13,23 @@ const UsersGlobe = (props) => {
         // Auto-rotate
         globeElement.current.controls().autoRotate = true;
         globeElement.current.controls().autoRotateSpeed = 0.01;
-        //globeElement.current.controls().enablePan = false;
-
         // Disable default zoom controls as it may conflict with page scrolling.
         // https://stackoverflow.com/questions/26183926/three-js-orbitcontrols-js-can-i-change-the-input-configuration
         // @todo add custom controls.
+        //globeElement.current.controls().enablePan = false;
         //globeElement.current.controls().mouseButtons = {
-            //ZOOM: THREE.MOUSE.RIGHT
-            //ZOOM: THREE.MOUSE.MIDDLE
-            //LEFT: THREE.MOUSE.ROTATE,
-            //MIDDLE: THREE.MOUSE.DOLLY,
-            //RIGHT: THREE.MOUSE.PAN
         //}
         globeElement.current.controls().enableZoom = false;
+
+        // Set initial point of view.
+        const lat = 0;
+        const lng = 0;
+        const altitude = 2.3;
+        globeElement.current.pointOfView({lat, lng, altitude});
     }, []);
 
     const catColor = d3.scaleOrdinal(d3.schemeCategory10.map(col => polished.transparentize(0.2, col)));
-
-    const getAlt = d => d.amountUsers * 5e-4;
+    const getAlt = d => d.amountUsers * 1e-3;
 
     // @todo refactor with CountryLabel.
     const getTooltip = d => `
@@ -52,17 +51,14 @@ const UsersGlobe = (props) => {
             bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
             backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
             showAtmosphere={true}
-
             backgroundColor="#000011"
-
             pointsData={props.usersByCountry}
             pointLat="lat"
             pointLng="lon"
             pointAltitude={getAlt}
-            pointRadius={0.5}
+            pointRadius={0.55}
             pointColor={d => catColor(d.countryName)}
             pointLabel={getTooltip}
-
             labelsData={props.usersByCountry}
             labelLat="lat"
             labelLng="lon"
