@@ -23,7 +23,7 @@ const UsersYears = (props) => {
       ];
     return (
         <>
-            <div className="nivo-container">
+            <div className="nivo-container is-hidden-mobile">
               <NivoLine data={data} />
             </div>
             <Table 
