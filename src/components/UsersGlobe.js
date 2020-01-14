@@ -56,7 +56,7 @@ const UsersGlobe = (props) => {
             pointLat="lat"
             pointLng="lon"
             pointAltitude={getAlt}
-            pointRadius={0.55}
+            pointRadius={0.5}
             pointColor={d => catColor(d.countryName)}
             pointLabel={getTooltip}
             labelsData={props.usersByCountry}
