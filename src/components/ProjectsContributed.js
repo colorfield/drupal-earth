@@ -8,7 +8,7 @@ const ProjectsContributed = (props) => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-      fetch(`../data/projects_${props.file}.json`)
+      fetch(`../../data/projects_${props.file}.json`)
         .then(res => res.json())
         .then(setProjectData)
         .then(setLoaded(true))
@@ -23,6 +23,8 @@ const ProjectsContributed = (props) => {
         {error ? 
             <div className="error">{error.message}</div> :
             <>
+              <h2 className="title has-text-white">Contributed projects</h2>
+              <p className="has-text-white">Data based on the most downloaded and used projects by Drupal version.</p>
               <h3 className="subtitle has-text-white">{props.label} usage</h3>
               <div className={heightClass}>
                 <NivoBar data={projectData} index="title" animate={false} layout="horizontal" leftMargin={300} />
@@ -38,6 +40,7 @@ const ProjectsContributed = (props) => {
         </div>
       );
     }
+  
 };
 
 export default ProjectsContributed;

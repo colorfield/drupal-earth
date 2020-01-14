@@ -20,7 +20,7 @@ class Nav extends Component {
 
   render() {
     const path = this.props.location.pathname;
-    // Using Link instead of NavLink to set custom active state
+    // Using Link instead of NavLink to set custom active state.
     return (
       <nav
         className="navbar is-fixed-top is-light"
@@ -59,13 +59,13 @@ class Nav extends Component {
               </span>
               Map
             </Link>
-            <Link className={path.startsWith('sers') ? "is-active navbar-item" : "navbar-item"} to="/users" onClick={this.toggleNav}>
+            <Link className={path.startsWith('users') ? "is-active navbar-item" : "navbar-item"} to="/users" onClick={this.toggleNav}>
               <span className="icon has-text-info" style={{ marginRight: 5 }}>
                 <i className="fa fa-lg fa-user" />
               </span>
               Users
             </Link>
-            <Link className={path === '/projects' ? "is-active navbar-item" : "navbar-item"} to="/projects" onClick={this.toggleNav}>
+            <Link className={path === '/projects/core' ? "is-active navbar-item" : "navbar-item"} to="/projects/core" onClick={this.toggleNav}>
               <span
                 className="icon has-text-info"
                 style={{ marginRight: 5 }}
