@@ -36,7 +36,7 @@ const About = () => (
         <li>Add filters (filter projects by version, users by contribution type, ...)</li>
         <li>Add other aggregations and improve results</li>
         <li>Improve the UI</li>
-        <li>Make use of SSR / Gatsby</li>
+        <li>SSR / PWA / Gatsby</li>
       </ul>
     </div>
   </section>
