@@ -16,7 +16,7 @@ const Router = () => (
     <Route path="/users/industries" component={UsersPages} />
     <Route path="/users/contributions" component={UsersPages} />
     <Route path="/projects/core" component={ProjectsPages} />
-    <Route path="/projects/contributed/moodule" component={ProjectsPages} />
+    <Route path="/projects/contributed/module" component={ProjectsPages} />
     <Route path="/projects/contributed/theme" component={ProjectsPages} />
     <Route path="/projects/contributed/distribution" component={ProjectsPages} />
     <Route path="/about" component={About} />

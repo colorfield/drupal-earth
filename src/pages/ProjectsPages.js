@@ -14,7 +14,7 @@ const Projects = (props) => {
       default:  
         result = <ProjectsCore />
         break;
-      case '/projects/contributed/moodule':
+      case '/projects/contributed/module':
         result = <ProjectsContributed key="module" label="Modules" file="module" height="150" />
         break;
       case '/projects/contributed/theme':
@@ -35,7 +35,7 @@ const Projects = (props) => {
           <div className="tabs is-toggle is-toggle-rounded is-centered">
             <ul>
               <li className={path === '/projects/core' ? "is-active" : ""}><NavLink to="/projects/core" activeClassName="is-active" className="has-text-white">Core project</NavLink></li>
-              <li className={path === '/projects/contributed/moodule' ? "is-active" : ""}><NavLink to="/projects/contributed/moodule" activeClassName="is-active" className="has-text-white">Modules</NavLink></li>
+              <li className={path === '/projects/contributed/module' ? "is-active" : ""}><NavLink to="/projects/contributed/module" activeClassName="is-active" className="has-text-white">Modules</NavLink></li>
               <li className={path === '/projects/contributed/theme' ? "is-active" : ""}><NavLink to="/projects/contributed/theme" activeClassName="is-active" className="has-text-white">Themes</NavLink></li>
               <li className={path === '/projects/contributed/distribution' ? "is-active" : ""}><NavLink to="/projects/contributed/distribution" activeClassName="is-active" className="has-text-white">Distributions</NavLink></li>
             </ul>
