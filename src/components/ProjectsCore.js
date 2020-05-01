@@ -24,7 +24,7 @@ const ProjectsCore = (props) => {
             <>
               <h2 className="title has-text-white">Drupal core</h2>
               <h3 className="subtitle has-text-white">Usage by version</h3>
-              <p>Mean installations by year.</p>
+              <p>Average installations per year.</p>
               <div className="nivo-container">
                 <NivoBar data={coreData} index="year" animate={true} layout="vertical" formatDisabled={true} />
               </div>  
