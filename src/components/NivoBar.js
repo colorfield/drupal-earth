@@ -16,7 +16,7 @@ const NivoBar = (props) =>  {
     return (
         <ResponsiveBar
             data={props.data}
-            keys={[ '5.x', '6.x', '7.x', '8.x' ]}
+            keys={[ '5.x', '6.x', '7.x', '8.x', '9.x' ]}
             indexBy={props.index}
             margin={{ top: 50, right: 130, bottom: 50, left: leftMargin }}
             padding={0.3}

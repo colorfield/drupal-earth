@@ -28,7 +28,7 @@ const UsersYears = (props) => {
             </div>
             <Table 
                 title='years'
-                description='New core contributors by year'
+                description='Core contributors by the year of their user account creation.'
                 rows={years}
                 headers={['Year', 'Core contributors']}
             />

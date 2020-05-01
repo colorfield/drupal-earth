@@ -39,7 +39,7 @@ class Nav extends Component {
           </Link>  
           <div className="navbar-item" href="/">
             <span className="has-text-weight-semibold">Drupal Earth</span>&nbsp;
-            <span className="">0.1.0</span>
+            <span className="">0.1.1</span>
           </div>
           <button className="button navbar-burger is-light" onClick={this.toggleNav}>
             <span />
